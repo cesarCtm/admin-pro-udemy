@@ -22,7 +22,9 @@ import { RjxsComponent } from './rjxs/rjxs.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { PipesModule } from '../pipes/pipes.module';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
+import { ModelUploadComponent } from '../components/model-upload/model-upload.component';
 @NgModule({
     declarations: [
         PagesComponent,
@@ -34,7 +36,10 @@ import { PipesModule } from '../pipes/pipes.module';
         AccountSettingsComponent,
         PromesasComponent,
         RjxsComponent,
-        ProfileComponent
+        ProfileComponent,
+        UsuariosComponent,
+        ModelUploadComponent
+
     ],
     exports: [
         DashboardComponent,

@@ -17,7 +17,7 @@ import { PipesModule } from './pipes/pipes.module';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent    
   ],
   imports: [
     BrowserModule,
