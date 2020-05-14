@@ -25,6 +25,9 @@ import { PipesModule } from '../pipes/pipes.module';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 import { ModelUploadComponent } from '../components/model-upload/model-upload.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 @NgModule({
     declarations: [
         PagesComponent,
@@ -38,7 +41,10 @@ import { ModelUploadComponent } from '../components/model-upload/model-upload.co
         RjxsComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModelUploadComponent
+        ModelUploadComponent,
+        HospitalesComponent,
+        MedicosComponent,
+        MedicoComponent
 
     ],
     exports: [

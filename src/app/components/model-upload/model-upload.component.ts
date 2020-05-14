@@ -54,7 +54,7 @@ export class ModelUploadComponent implements OnInit {
   cerrarModal(){
     this.imagenTemporal = null;
     this.imagenSubir = null;
-    this._modalUploadService.ocultarModal;
+    this._modalUploadService.ocultarModal();
   }
 
 }
