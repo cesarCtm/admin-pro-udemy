@@ -12,21 +12,24 @@ import { RegisterComponent } from './login/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //pipe module
 import { PipesModule } from './pipes/pipes.module';
+import { PagesComponent } from './pages/pages.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent    
+    RegisterComponent,
+    PagesComponent  
   ],
   imports: [
     BrowserModule,
-    PagesModule,
-    AppRoutingModule,
+    AppRoutingModule,    
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PipesModule
+    PipesModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

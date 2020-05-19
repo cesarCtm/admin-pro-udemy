@@ -22,6 +22,23 @@ export class UsuarioService {
   constructor( public http: HttpClient, public router : Router, public _subirArchivoService: SubirArchivoService ) {
     this.cargarStorage();
   }
+  renuevaToken(){
+    let url = URL_SERVICIOS + '/login/renuevatoken';
+    url += '?token=' + this.token;
+    return this.http.get( url ).pipe(
+      map( (resp : any) => {
+        this.token = resp.token;
+        localStorage.setItem('token', this.token);
+        console.log('token renovado');
+        return true;
+      }),
+      catchError( err => {
+        this.router.navigate(['/login']);
+        Swal.fire('no se pudo renovar token', 'no fue posible renovar el token', 'error')
+        return throwError(err.message);
+      })
+    )
+  }
 
   estarLogueado(){
     return (this.token.length > 5) ? true : false;
@@ -131,7 +148,7 @@ export class UsuarioService {
       }),
     catchError( err => {
       Swal.fire(err.error.mensaje, err.error.errors.message, 'error')
-      return throwError(err);0
+      return throwError(err);
     })
     );
 

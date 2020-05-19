@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { ModelUploadComponent } from '../components/model-upload/model-upload.component';
 
 @NgModule({
     imports: [
@@ -20,13 +21,15 @@ import { PipesModule } from '../pipes/pipes.module';
         NoPageFoundComponent,
         HeaderComponent,
         SidebarComponent,
-        BreadcrumbsComponent
+        BreadcrumbsComponent,
+        ModelUploadComponent
     ],
     exports: [
         NoPageFoundComponent,
         HeaderComponent,
         SidebarComponent,
-        BreadcrumbsComponent
+        BreadcrumbsComponent,
+        ModelUploadComponent
     ]
 })
 export class SharedModule{ }
